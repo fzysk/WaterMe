@@ -4,10 +4,9 @@
 #include <ESP8266WiFi.h>
 
 class WIFIConnector {
-
   private:
-    const char* ssid = "ssid";
-    const char* password = "password";  
+    const char* ssid = "";
+    const char* password = "";  
     const byte RECONNECT_RETRIES = 250;
     
     bool is_connected;

@@ -2,7 +2,13 @@
 
 void WIFIConnector::Connect() {
   byte retries = 0;
+  
   WiFi.begin(ssid, password);
+
+  IPAddress ip(192,168,0,103);
+  IPAddress gateway(192,168,0,1);
+  IPAddress subnet(255,255,255,0);
+  WiFi.config(ip, gateway, subnet);
   
   Serial.println("");
   Serial.println("START");
